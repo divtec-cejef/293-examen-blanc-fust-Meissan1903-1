@@ -28,11 +28,26 @@ a {
     color: #ff8800;
 }
 
+a:hover {
+    color: #666666;
+}
+
+p {
+    font-size: 1.3em;
+    line-height: 1.5;
+    max-width: 800px;
+}
+
 /********** STYLE HEADER *********/
 header {
     padding: 1rem;
     text-align: center;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+header img {
+    max-width: 800px;
+    height: auto;
 }
 
 /********** STYLE NAVIGATION *********/
@@ -62,6 +77,7 @@ header nav a:hover {
     background-color: #eeeeee;
 }
 
+
 /********** STYLE CONTENU PRINCIPAL *********/
 main {
     padding: 1rem;
@@ -73,11 +89,23 @@ main {
 .produits {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 5px;
 }
 
-.produits li {
+.produits li:not(:last-child) {
     padding: 2% 1rem;
     transition: all 0.2s ease-in-out;
+    width: calc(50% - 5px);
+    height: auto;
+    justify-content: space-around;
+}
+
+.produits li:last-child {
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 .produits li:hover {
@@ -93,10 +121,23 @@ main {
 .produits figcaption {
     font-size: 1.2rem;
     line-height: 2;
+    border: 2px #151515 solid;
 }
 
 .produits figcaption h2 {
     text-align: center;
     margin: .5em 0 0;
     line-height: 1.1;
+    color: #ff8800;
+}
+
+/********** FOOTER *********/
+
+footer {
+    background-color: #151515;
+    color: #ffffff;
+    margin-top: 2rem;
+    padding: 20px 40px 20px 40px;
+    display: flex;
+    justify-content: center;
 }
